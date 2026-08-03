@@ -179,14 +179,7 @@ class _IndexedScrollActivity extends ScrollActivity {
 /// - Scroll state monitoring (user scrolling detection)
 /// - Visibility state for navigation buttons
 class ChatScrollController {
-  ChatScrollController({
-    required this._scrollController,
-    required this._onStateChanged,
-    required this._getAutoScrollEnabled,
-    required this._getAutoScrollIdleSeconds,
-    this._getTopRevealInset,
-    this.isGenerating,
-  }) {
+  ChatScrollController() {
     final scrollController = _scrollController;
     _messageListController = ListController(
       onDetached: _cancelIndexedNavigationForDetach,
