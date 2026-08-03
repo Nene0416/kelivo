@@ -133,7 +133,7 @@ class _Http {
     if (enabled && host.isNotEmpty && portStr.isNotEmpty) {
       final port = int.tryParse(portStr) ?? 8080;
       return DioHttpClient(
-        proxy: NetworkProxyConfig(
+        _proxy: NetworkProxyConfig(
           enabled: true,
           type: ProviderConfig.resolveProxyType(cfg.proxyType),
           host: host,
