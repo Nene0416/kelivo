@@ -149,17 +149,9 @@ dependency_overrides:
 # The following section is specific to Flutter packages.
 flutter:
   generate: true
-  config:
-    # Existing iOS plugins require incompatible TOCropViewController ranges.
-    # Keep CocoaPods until those plugins can share an SPM dependency graph.
-    enable-swift-package-manager: false
 
-  # The following line ensures that the Material Icons font is
-  # included with your application, so that you can use the icons in
-  # the material Icons class.
   uses-material-design: true
 
-  # To add assets to your application, add an assets section, like this:
   assets:
     - assets/icons/
     - assets/app_icon.png
