@@ -315,7 +315,7 @@ class _ImageViewerPageState extends State<ImageViewerPage>
           Size(info.image.width.toDouble(), info.image.height.toDouble()),
         );
       },
-      onError: (_, _) {
+      onError: (err, stack) {
         stream.removeListener(listener);
         _imageSizeStreams.remove(src);
         _imageSizeListeners.remove(src);
