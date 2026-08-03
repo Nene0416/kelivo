@@ -89,6 +89,10 @@ Stream<ChatStreamChunk> _sendOpenAIChatCompletionsStream(
   Map<String, dynamic>? extraBody,
   bool stream = true,
 }) {
+  // ---- 强制开启思维链（DeepSeek） ----
+  extraBody ??= {};
+  extraBody['thinking'] = {'type': 'enabled', 'budget_tokens': 32000};
+  // ------------------------------------
   final cfg = config.copyWith(useResponseApi: false);
   return _sendOpenAIStream(
     client,
